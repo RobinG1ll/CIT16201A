@@ -101,39 +101,99 @@
             
         }
         
+        #but1 {
+            position: relative;
+            left: 250px;
+            top: 50px;
+            right: 0px;
+            bottom: 0px;
+            width: 240px;
+            height: 200px;
+            margin: auto;
+            transition: width 1s, height 1s;
+        }
+        
+        #but2 {
+            position: relative;
+            left: 300px;
+            top: 50px;
+            right: 0px;
+            bottom: 0px;
+            width: 240px;
+            height: 200px;
+            margin: auto;
+            transition: width 1s, height 1s;
+        }
+        
+        #but3 {
+            position: relative;
+            left: 350px;
+            top: 50px;
+            right: 0px;
+            bottom: 0px;
+            width: 240px;
+            height: 200px;
+            margin: auto;
+            transition: width 1s, height 1s;
+        }
+            
+        #but4 {
+            position: relative;
+            left: 400px;
+            top: 50px;
+            right: 0px;
+            bottom: 0px;
+            width: 240px;
+            height: 200px;
+            margin: auto;
+            transition: width 1s, height 1s;
+        }
+        
+        #but5 {
+            position: relative;
+            left: 450px;
+            top: 50px;
+            right: 0px;
+            bottom: 0px;
+            width: 240px;
+            height: 200px;
+            margin: auto;
+            transition: width 1s, height 1s;
+        }
+        
         #pictext {
             color: rgba(255, 255, 255, 1);
             font-size: 25px;
             display: inline-block;
         }
-        
+                
         .pictext1 {
             position: absolute;
-            top: 6%;
-            right: 81%;
+            top: -10px;
+            right: 77%;
         }
         
         .pictext2 {
             position: absolute;
-            top: 6%;
-            right: 62.52%;
+            top: -10px;
+            right: 60%;
         }
         
         .pictext3 {
             position: absolute;
-            top: 6%;
+            top: -10px;
             right: 49.5%;
         }
         
         .pictext4 {
             position: absolute;
-            top: 6%;
+            top: -10px;
             right: 33%;
         }
         
         .pictext5 {
             position: absolute;
-            top: 6%;
+            top: -10px;
             right: 16.5%;
         }
         
@@ -177,11 +237,11 @@
             <h1 id='pictext' class='pictext3 '>Doge</h1>
             <h1 id='pictext' class='pictext4 '>Steam</h1>
             <h1 id='pictext' class='pictext5 '>Kitten</h1>
-            <img class='thumb5' src='http://s.jtvnw.net/jtv_user_pictures/hosted_images/GlitchIcon_WhiteonPurple.png' />
-            <img class='thumb5' src='http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0007/5087/brand.gif?itok=GXzcPf9A' />
-            <img class='thumb5' src='http://s3.amazonaws.com/barkpost-assets/50+GIFs/41.gif' />
-            <img class='thumb5' src='https://image.freepik.com/free-icon/steam-logo-games-website_318-40350.png' />
-            <img class='thumb5' src='http://placekitten.com/300/300' />
+            <img id='but1' src='http://s.jtvnw.net/jtv_user_pictures/hosted_images/GlitchIcon_WhiteonPurple.png' />
+            <img id='but2' src='http://www.brandsoftheworld.com/sites/default/files/styles/logo-thumbnail/public/0007/5087/brand.gif?itok=GXzcPf9A' />
+            <img id='but3' src='http://s3.amazonaws.com/barkpost-assets/50+GIFs/41.gif' />
+            <img id='but4' src='https://image.freepik.com/free-icon/steam-logo-games-website_318-40350.png' />
+            <img id='but5' src='http://placekitten.com/300/300' />
         </div>
         
         <div id='biobox'>
@@ -194,5 +254,62 @@
         <div id='botbanner'>
             <h3 id='bottag'>Thank you for visiting</h3>
         </div>
+        <script>
+            var but1 = document.getElementById('but1');
+            var but2 = document.getElementById('but2');
+            var but3 = document.getElementById('but3');
+            var but4 = document.getElementById('but4');
+            var but5 = document.getElementById('but5');
+            
+            var display1 = document.getElementById('portbox');
+            var display2 = document.getElementById('namebox');
+            var display3 = document.getElementById('biobox');
+            
+            var butWidth = 200;
+            var butHeight = 200;
+            var butLeft = 200;
+            var butRight = 200;
+            var butBot = 200;
+            var butTop = 200;
+            
+            var r = 0;
+            var g = 0;
+            var b= 0;
+            
+            but1.onclick = function(){
+                r = Math.round(Math.random()*255);
+                
+                display1.style.backgroundColor = 'rgb('+r+', '+g+', '+b+')';
+            }
+            
+            but2.onclick = function(){
+                r = Math.round(Math.random()*255);
+                g = Math.round(Math.random()*255);
+                
+                display2.style.backgroundColor = 'rgb('+r+', '+g+', '+b+')';
+                
+            }
+            
+            but3.onclick = function(){
+                but3.style.width = butWidth+'px';
+                
+                butWidth = butWidth + 100;
+            }
+            
+            but4.onclick = function(){
+                butLeft = Math.round(Math.random()+100);
+                butBot = Math.round(Math.random()+100);
+                
+                
+                but4.style.left = butLeft+'px';
+                but4.style.bottom = butBot-'px';
+            }
+            
+            but5.onclick = function (){
+                r = Math.round(Math.random()*150);
+                
+                display3.style.backgroundColor = 'rgb('+r+', '+g+', '+b+')';   
+            }
+        </script>
     </body>
 </html>
