@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+    </head>
+    
+    <style>
+        body {
+            margin: 0px;
+            background-image: url(http://cdn.wallpapersafari.com/48/91/cat5zO.jpg);
+            background-size: auto;
+        }
+       
+        #chat {
+            position: absolute;
+            top: 125px;
+            left: 250px;
+            bottom: 0px;
+            right: 0px;
+            width: 900px;
+            height: 60%;
+        }
+        
+        #activity{
+            clear: both;
+            font-size: 60px;
+            text-align: center;
+            position: fixed;
+            width: 100vw;
+            height: 100px;
+            bottom: -100px;
+            transition: bottom, 1.5s;
+        }
+        
+        .button1 {
+            position: relative;
+            top: 5px;
+            left: 2%;
+            width: 200px;
+            height: 100px;
+        }
+        
+        .button2 {
+            position: relative;
+            top: 5px;
+            left: 74%;
+            width: 200px;
+            height: 100px;
+        }        
+        
+        .inputbars {
+            position: relative;
+            top: -50px;
+            left: 22.5%;
+            width: 300px;
+            height: 50px;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+        .headerText {
+            position: absolute;
+            top: 10px;
+            font-size: 30px;
+        }
+        
+        .bodText {
+            position: absolute;
+            top: 40px;
+            font-size: 20px;
+        }
+        
+        .chatPicThumb {
+            position: absolute;
+            left: 20px;
+            top: 25px;
+            border-radius: 200px;
+            height: 70px;
+            width:auto;
+        }
+        
+    </style>
+    
+    <body>
+        <button id='create' class='button1'>Create</button>
+        <button id='delete' class='button2'>Clear Post</button>
+            
+        <div id='inputs'>
+        <input type="text" id='url' placeholder="Enter IMG URL Here" class='inputbars' />
+        <input type="text" id='title' placeholder="Enter Title Here" class='inputbars' />
+        <input type="text" id='chatext' placeholder="Enter Text here" class='inputbars' />
+        </div>
+            
+        <div id='chat'></div>
+        <div id='activity'></div>
+        
+        <script>
+            var createBut = document.getElementById('create');
+            var deleteBut = document.getElementById('delete');
+            
+            var urlInput = document.getElementById('url');
+            var titleInput = document.getElementById('title');
+            var chatInput = document.getElementById('chatext');
+            
+            var chatDisplay = document.getElementById('chat');
+            var activDisplay = document.getElementById('activity');
+            
+            createBut.onclick = function(){
+                
+                var newObj = document.createElement('div');
+                chatDisplay.appendChild(newObj);
+                
+                newObj.style.width = '70vw';
+                newObj.style.height = '120px';
+                newObj.style.position = 'relative';
+                newObj.style.backgroundColor = 'Red';
+                
+                var headerDiv = document.createElement('div');
+                newObj.appendChild(headerDiv);
+                
+                headerDiv.className = 'headerText';
+                headerDiv.style.width = '80px';
+                headerDiv.style.height = '40px';
+                headerDiv.style.left = '150px';
+                headerDiv.style.position = 'absolute';
+                headerDiv.innerHTML = titleInput.value;
+                
+                var bodDiv = document.createElement('div');
+                newObj.appendChild(bodDiv);
+                
+                bodDiv.className = 'bodText';
+                bodDiv.style.width = '80px';
+                bodDiv.style.height = '40px';
+                bodDiv.style.left = '150px';
+                bodDiv.style.position = 'absolute';
+                bodDiv.innerHTML = chatInput.value;
+                
+                var newImg = document.createElement('img');
+                newObj.appendChild(newImg);
+                newImg.className = 'chatPicThumb';
+                newImg.src = urlInput.value;
+                
+                activDisplay.innerHTML = 'Created A New Post!';
+                activDisplay.style.backgroundColor = 'Green';
+                activDisplay.style.bottom = '0px';
+            }
+            
+            deleteBut.onclick = function(){
+                chatDisplay.innerHTML = '';
+            
+                activDisplay.innerHTML = "Post's have been removed!";
+                activDisplay.style.backgroundColor = 'Red';
+                activDisplay.style.bottom = '-100px';
+            }
+            
+        </script>
+    </body>
+</html>
