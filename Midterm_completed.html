@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Midterm</title>
+    </head>
+    
+    <style>
+        body{
+            margin: 0px;
+        }
+        
+        #top {
+            position: absolute;
+            height: 25vh;
+            width: 100vw;
+            top: 0px;
+            left: 0px;
+        } 
+        
+        #bot {
+            position: absolute;
+            height: 25vh;
+            width: 100vw;
+            bottom: 0px;
+            left: 0px;
+        }        
+        
+        #mid {
+            position: absolute;
+            top: 25%;
+            bottom: 25%;
+            left: 0px;
+            height: 50vh;
+            width: 100vw;
+        }
+        
+        #question {
+            margin: 40px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 400px;
+            width: 400px;
+            background-image: url(q.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgb(0, 0, 0);
+            background-position: top center;
+        }
+        
+        #title {
+            position: absolute;
+            top: 10px;
+            left: 550px;
+            width: 25%;
+            height: auto;
+        }
+        
+        #descript {
+            position: absolute;
+            top: 90px;
+            left: 550px;
+            width: 30%;
+            height: auto;
+        }
+        
+        #cust{
+            position: absolute;
+            top: 200px;
+            right: -490px;
+            width: 485px;
+            height: 60%;
+            background-color: lightgray;
+            transition: right 0.5s;
+        }
+        
+        #other{
+            position: absolute;
+            top: 30px;
+        }
+        
+        #custHero{
+            position: absolute;
+            top: 260px;
+            width: 450px;
+            margin: 18px;
+        }
+        
+        #cusImg{
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            height: 50px;
+            width: 200px;
+        }
+        
+        #addcust{
+            position: absolute;
+            top: 240px;
+            right: -490px;
+            height: 50px;
+            width: 200px;
+            transition: right 0.5s;
+        }
+        
+        #titlein{
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            height: 20px;
+            width: 400px;
+        }
+        
+        #despin{
+            position: absolute;
+            top: 50px;
+            left: 25px;
+            height: 20px;
+            width: 400px;
+        }
+        
+        #urlin{
+            position: absolute;
+            top: 200px;
+            right: -490px;
+            height: 20px;
+            width: 400px;
+            transition: right 0.5s;
+        }
+        
+        .questionm {
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            width: 400px;                    
+            height: 400px;
+        }     
+        
+        .Top4 {
+            position: relative;
+            margin: 10px;
+            width: auto;
+            height: auto;
+            border-radius: 100px;
+        }            
+        
+        .Bot4 {
+            position: relative;
+            margin: 10px;
+            width: auto;
+            height: auto;
+            border-radius: 100px;
+        }
+        
+        .gear {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .right2 {
+            position: relative;
+            margin: 20px;
+        }
+        
+    </style>
+    
+    <body>
+        <div id='top'>
+            <img id='hero1' src='1.jpg' class='Top4'/>
+            <img id='hero2' src='3.jpg' class='Top4'/>
+            <img id='hero3' src='10.jpg' class='Top4'/>
+            <img id='hero4' src='4.jpg' class='Top4'/>
+        </div>
+        
+        <div id='mid'>
+            <div id='question'>
+            </div>
+            
+            <div id='title'><h1>Title For the image</h1></div>
+            
+            <div id='descript'><u><b><p>DESCRIPTION</p></b></u>
+Lorem ipsum dolor sit amet, euripidis consectetuer ea pro, nullam everti ex nec. Eu liber consul principes est. Ex laboramus appellantur signiferumque vis. At sed aliquam democritum reprehendunt, ex argumentum interesset qui. Mei ea assum utinam deleniti, mei no augue imperdiet. Cu has tation consequat ullamcorper. Possit ancillae noluisse mea et, accusam vivendum his ad, vix ad doctus accusata moderatius. Animal detracto albucius has ad, falli praesent quo no, utroque adversarium his te. No eripuit noluisse assueverit duo. Pri te tritani consulatu scripserit, intellegam reformidans liberavisse ex nam. Ad mucius cetero verear est, essent antiopam in quo, zril percipitur nec ea.</div>
+        </div>
+        
+        <div id='bot'>
+            <img id='hero5' src='8.jpg' class='Bot4'/>
+            <img id='hero6' src='5.jpg' class='Bot4'/>
+            <img id='hero7' src='2.jpg' class='Bot4'/>
+            <img id='hero8' src='6.jpg' class='Bot4'/>
+        </div>
+        
+        <div id='gear'>
+            <img src='gear.png' id='geari' class='gear'/>
+            <div id='cust'>
+                <div id='other'>
+                    <img id='hero9' src='7.jpg' class='right2' />
+                    <img id='hero10' src='9.jpg' class='right2' />
+                </div>
+                <div id='custHero'>
+                <input id='titlein' type='text' placeholder=' Text input for title'/>
+                <input id='despin' type='text' placeholder=' Text input for description'/>
+                <button id='cusImg'>Custom Image</button>
+                
+                <input type='text' id='urlin' placeholder='Text input for image link'/>
+                <button id='addcust'>Add Custom</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var topDiv = document.getElementById('top');
+            var botDiv = document.getElementById('bot');
+            
+            var hero1 = document.getElementById('hero1');
+            var hero2 = document.getElementById('hero2');
+            var hero3 = document.getElementById('hero3');
+            var hero4 = document.getElementById('hero4');
+            var hero5 = document.getElementById('hero5');
+            var hero6 = document.getElementById('hero6');
+            var hero7 = document.getElementById('hero7');
+            var hero8 = document.getElementById('hero8');
+            var hero9 = document.getElementById('hero9');
+            var hero10 = document.getElementById('hero10');
+            
+            var titleDiv = document.getElementById('title');
+            var desDiv = document.getElementById('descript');
+            var qDiv = document.getElementById('question');
+            
+            var gearBut = document.getElementById('geari');
+            var gearAdd = document.getElementById('cust');
+            var addBut = document.getElementById('addcust');
+            var custBut = document.getElementById('cusImg');
+            
+            var titleInput = document.getElementById('titlein');
+            var despInput = document.getElementById('despin');
+            var urlInput = document.getElementById('urlin');
+            
+            hero1.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./1.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                titleDiv.innerHTML = '<h1>Black Panther</h1>';
+                desDiv.innerHTML = "The Black Panther (T'Challa) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and penciller and co-plotter Jack Kirby, he first appeared in Fantastic Four #52 (July 1966). He is the first black superhero in mainstream American comics, debuting years before such early African-American superheroes as Marvel Comics' the Falcon (1969) and Luke Cage (1972), and DC Comics' Green Lantern John Stewart (1971), Tyroc(1976), and Black Lightning (1977). The character is usually depicted as the king and protector of Wakanda, a fictional African nation. Chadwick Boseman portrays the Black Panther in Captain America: Civil War (2016) and is set to return in Black Panther (2018), both set in the Marvel Cinematic Universe.";
+            }
+            
+            hero2.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./3.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>She-Hulk</h1>';
+                desDiv.innerHTML = "She-Hulk (Jennifer Walters) is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist John Buscema, she first appeared in Savage She-Hulk #1 (February 1980). A cousin to Dr. Bruce Banner, Walters once received an emergency blood transfusion from him when she was wounded, which led to her acquiring a milder version of his Hulk condition. As such, Walters becomes a large powerful green-hued version of herself while still largely retaining her personality; in particular she retains her intelligence and emotional control, though like Hulk, she still becomes stronger if enraged. In later issues, her transformation is permanent.";
+            }
+            
+            hero3.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./10.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>Winter Soldier</h1>';
+                desDiv.innerHTML = "In 2005, Marvel launched a new Captain America series (Volume 5) with writer Ed Brubaker, who revealed that Bucky did not die in World War II. It was revealed that after the plane exploded, General Vasily Karpov and the crew of a Russian patrol submarine found Bucky's cold-preserved body, albeit with his left arm severed. Bucky was revived in Moscow, but suffered brain damage with amnesia as a result of the explosion. Scientists attached a bionic arm, periodically upgrading it as technology improved.";
+            }
+            
+            hero4.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./4.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>Thor</h1>';
+                desDiv.innerHTML = "Thor is a fictional superhero appearing in American comic books published by Marvel Comics. The character, based on the Norse mythological deity of the same name, is the Asgardian god of thunder and possesses the enchanted hammer Mjolnir, which grants him the ability of flight and weather manipulation amongst his other superhuman attributes.";
+            }            
+            
+            hero5.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./8.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>Nova(Richard Rider)</h1>';
+                desDiv.innerHTML = "Nova (Richard Rider) is a fictional superhero appearing in American comic books published by Marvel Comics. The character appeared historically as the star of his own series, and at other times, as a supporting character in team books such as The New Warriors. He is a member of the intergalactic police force known as the Nova Corps, for which he gained superhuman abilities including enhanced strength, flight and resistance to injury.";
+            }
+            
+            hero6.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./5.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>Iron Fist</h1>';
+                desDiv.innerHTML = "Iron Fist (Daniel 'Danny' Rand) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by Roy Thomas and Gil Kane, Iron Fist first appeared in Marvel Premiere #15 (May 1974). The character is a practitioner of martial arts and the wielder of a mystical force known as the Iron Fist, which allows him to summon and focus his chi. He starred in his own solo series in the 1970s, and shared the title Power Man and Iron Fist for several years with Luke Cage, partnering with Cage to form the superhero team Heroes for Hire. The character has starred in numerous solo titles since, including The Immortal Iron Fist, which expanded on his origin story and the history of the Iron Fist.";
+            }
+            
+            hero7.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./2.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>Doctor Strange</h1>';
+                desDiv.innerHTML = "Dr. Stephen Vincent Strange, also known as Doctor Strange, is a fictional superhero appearing in American comic books published by Marvel Comics. Created by artist and character conceptualist Steve Ditko, the character first appeared in Strange Tales #110 (cover-dated July 1963). A former neurosurgeon, Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. Debuting in the Silver Age of comics, the character has been featured in several comic book series and adapted in a variety of media including video games, an animated television show, and films. Inspired by storytellings of black magic and Chandu the Magician, Strange was created to bring a different kind of character and themes of mysticism to Marvel Comics.";
+            }
+            
+            hero8.onclick = function(){
+                qDiv.style.backgroundImage = 'url(./6.jpg)';
+                qDiv.style.backgroundSize = 'cover';
+                qDiv.style.backgroundPosition = 'top center';
+                
+                titleDiv.innerHTML = '<h1>Hawkeye</h1>';
+                desDiv.innerHTML = "Hawkeye (Clint Barton) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Don Heck, the character first appeared as a villain in Tales of Suspense #57 (Sept. 1964) and later joined the Avengers in The Avengers #16 (May 1965). He has been a prominent member of the team ever since. He was also ranked at #44 on IGN's Top 100 Comic Book Heroes list.";
+            }
+            
+            gearBut.onclick = function(){
+                gearAdd.style.right = '20px';
+            }
+            
+            hero9.onclick = function(){
+                var newPic = document.createElement('img');
+                newPic.src = '7.jpg';
+                newPic.className = 'Top4'; 
+                topDiv.appendChild(newPic);
+                
+                qDiv.style.backgroundImage = 'url(./7.jpg)';
+                
+                titleDiv.innerHTML = titleInput.value;
+                desDiv.innerHTML = despInput.value;
+                
+                gearAdd.style.right = '-490px';
+            }
+            
+            hero10.onclick = function(){
+                var newPic = document.createElement('img');
+                newPic.src = '9.jpg';
+                newPic.className = 'Bot4';
+                botDiv.appendChild(newPic);
+                
+                qDiv.style.backgroundImage = 'url(./9.jpg)';
+                
+                titleDiv.innerHTML = titleInput.value;
+                desDiv.innerHTML = despInput.value;
+                
+                gearAdd.style.right = '-490px';
+            }
+            
+            addBut.onclick = function(){
+                var newPic = document.createElement('img');
+                newPic.src = urlInput.value;
+                newPic.className = 'Bot4';
+                botDiv.appendChild(newPic);
+                
+                qDiv.style.backgroundImage = 'url('+urlInput.value+')';
+                
+                titleDiv.innerHTML = titleInput.value;
+                desDiv.innerHTML = despInput.value;
+                
+                gearAdd.style.right = '-490px';
+            }
+            
+            custBut.onclick = function(){
+                addBut.style.right = '20px';
+                urlInput.style.right = '30px';
+            }
+            
+        </script>
+    </body>
+</html>
