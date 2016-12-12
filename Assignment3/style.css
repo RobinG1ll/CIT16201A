@@ -1,0 +1,102 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+
+#inputs{
+    position: absolute;
+    margin: 0px;
+    height: 30vh;
+    width: 70vw;
+    left: 15vw;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(cool-banner.jpg);
+}
+
+#userIn{
+    position: absolute;
+    margin: 30px;
+    left: 5vw;
+    height: 25px;
+    width: 400px;
+}
+
+#imageIn{
+    position: absolute;
+    top: 50px;
+    left: 5vw;
+    margin: 30px;
+    height: 25px;
+    width: 400px;
+}
+
+#movieIn{
+    position: absolute;
+    margin: 30px;
+    top: 50px;
+    left: 32vw;
+    height: 25px;
+    width: 500px;
+}
+
+#commentIn{
+    position: absolute;
+    margin: 30px;
+    top: 100px;
+    left: 5vw;
+    height: 25px;
+    width: 700px;
+}
+
+#submit{
+    position: absolute;
+    top: 170px;
+    left: 50vw;
+    height: 80px;
+    width: 300px;
+    font-size: 100%;
+    background-color: red;
+}
+
+#results{
+    position: relative;
+    left: 5vw;
+    margin: 10px;
+    top: 35vh;
+    height: 65vh;
+    width: 90vw;
+    background-color: black;
+}
+
+.bodText {
+    position: absolute;
+    font-size: 40px;
+    text-align: left;
+}
+
+.picThumb{
+    position: absolute;
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+}
+
+.postThumb{
+    position: absolute;
+    margin: 20px;
+    top: -40px;
+    right: 20px;
+    height: auto;
+    width: 150px;
+}
+
+.userText {
+    position: absolute;
+    margin: 20px;
+    right: 0px;
+    font-size: 28px;
+    text-align: center;
+}
